@@ -1,21 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dog Image Explorer</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐶 Discover your best friend
+  </title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="dog">
-    <h1>🐶 Dog Image Explorer</h1>
-    <p>Random cute dogs from Dog API</p>
-    <button onclick="reloadDogs()">Load New Dogs</button>
+<header>
+  <div class="hero-copy">
+    <div class="eyebrow">Curated Collection</div>
+    <h1>Discover your <span class="accent">best friend</span></h1>
+  </div>
+  <div class="header-actions">
+    <button onclick="loadDogs()">Explore more</button>
+    <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()">Dark mode</button>
+    <!-- <a href="details.html" class="page-link secondary">Explore care</a> -->
+  </div>
 </header>
 
-<section class="boxes"></section>
+<section class="controls">
+  <div class="search-box">
+    <span class="icon">🔍</span>
+    <input type="text" id="search" placeholder="Search breed..." oninput="filterDogs()">
+    <button onclick="filterDogs()">Search</button>
+  </div>
+</section>
+
+<main id="grid"></main>
+<header>
+  <div class="hero-copy">
+    <div class="eyebrow">Care Architecture</div>
+    <h1>Deeper narratives for thoughtful pet care</h1>
+  </div>
+  <div class="header-actions">
+    <a href="index.html" class="page-link">Back to home</a>
+  </div>
+</header>
+
+<main class="details-grid">
+  <section class="info-card care-architecture">
+    <h2>Care Architecture</h2>
+    <p class="card-copy">A balanced routine keeps both energy and affection thriving. These care pillars are designed to support active, affectionate companions.</p>
+
+    <ul class="feature-list">
+      <li>
+        <span class="feature-icon">🏃</span>
+        <div>
+          <strong>Daily Exercise</strong>
+          <p>Requires at least 2 hours of active movement and play.</p>
+        </div>
+      </li>
+      <li>
+        <span class="feature-icon">✂️</span>
+        <div>
+          <strong>Grooming</strong>
+          <p>Heavy shedders. Daily brushing recommended during season changes.</p>
+        </div>
+      </li>
+      <li>
+        <span class="feature-icon">🧠</span>
+        <div>
+          <strong>Mental Enrichment</strong>
+          <p>Eager to please; excels in obedience, agility, and dock diving.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="info-card deep-narratives">
+    <div class="detail-hero">
+      <div class="detail-label">Deeper Narratives</div>
+    </div>
+
+    <article class="detail-panel">
+      <div class="panel-icon">👍</div>
+      <h3>Grooming Needs</h3>
+      <p class="panel-meta">Border Collie</p>
+      <p>Moderate. Requires regular brushing to manage the double coat and seasonal shedding.</p>
+      <p class="panel-meta">Corgi</p>
+      <p>Moderate to High. The “Corgi glitter” (shedding) is year-round and requires frequent attention.</p>
+    </article>
+
+    <article class="detail-panel">
+      <div class="panel-icon">🏠</div>
+      <h3>Living Space</h3>
+      <p>While Collies dream of sprawling farms, Corgis are surprisingly adaptable to apartment life if given enough neighborhood patrols.</p>
+      <a href="#" class="detail-link">Environment Guide</a>
+    </article>
+  </section>
+</main>
+
 
 <script src="script.js"></script>
 </body>
